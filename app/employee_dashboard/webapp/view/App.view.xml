@@ -1,0 +1,12 @@
+<mvc:View xmlns:f="sap.f" controllerName="employeedashboard.controller.App"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <App id="app">
+        <f:FlexibleColumnLayout id="fcl">
+            <f:beginColumnPages>
+                <mvc:XMLView id="beginView" viewName="employeedashboard.view.View1"></mvc:XMLView>
+            </f:beginColumnPages>
+        </f:FlexibleColumnLayout>
+    </App>
+</mvc:View>

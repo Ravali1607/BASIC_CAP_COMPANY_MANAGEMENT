@@ -1,0 +1,42 @@
+{
+  "name": "company_management",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@cap-js-community/odata-v2-adapter": "^1.15.2",
+    "@cap-js/hana": "^2",
+    "@sap/cds": "^9",
+    "@sap/xssec": "^4",
+    "express": "^4"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@cap-js/cds-types": "^0.13.0",
+    "@cap-js/sqlite": "^2",
+    "@sap/cds-dk": ">=8"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-employee_dashboard": "cds watch --open employee_dashboard/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-department_list_report": "cds watch --open department_list_report/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "cds": {
+    "requires": {
+      "[production]": {
+        "auth": "xsuaa"
+      },
+      "html5-runtime": true,
+      "db": "hana"
+    }
+  },
+  "sapux": [
+    "app/department_list_report",
+    "app/department_list_report",
+    "app/department_list_report"
+  ]
+}

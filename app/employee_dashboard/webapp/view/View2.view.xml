@@ -1,0 +1,28 @@
+<mvc:View controllerName="employeedashboard.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page2" title="{i18n>title}">
+        <headerContent>
+            <!-- <Button id="btnFullScreen1" icon="sap-icon://full-screen" press=".onToggleFullScreen"/> -->
+            <Button icon="sap-icon://decline" press="onClose"></Button>
+		</headerContent>
+    <Table items="{dataModel>/items}" id="table2">
+        <columns>
+            <Column ><Label text="Employee Id"></Label></Column>
+            <Column ><Label text="Employee Name"></Label></Column>
+            <Column ><Label text="Department Name"></Label></Column>
+            <Column ><Label text="Project Name"></Label></Column>
+        </columns>
+        <items>
+            <ColumnListItem >
+                <cells>
+                    <Text text="{dataModel>emp_id}"></Text>
+                    <Text text="{dataModel>emp_name}"></Text>
+                    <Text text="{dataModel>dept_name}"></Text>
+                    <Text text="{dataModel>proj_name}"></Text>
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+    </Page>
+</mvc:View>

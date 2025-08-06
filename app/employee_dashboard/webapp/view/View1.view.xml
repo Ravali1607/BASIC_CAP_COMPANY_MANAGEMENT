@@ -1,0 +1,17 @@
+<mvc:View controllerName="employeedashboard.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+	xmlns:unified="sap.ui.unified"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <Table items="{/EMPLOYEE}">
+            <columns>
+                <Column ><Label text="Employee ID"></Label></Column>
+            </columns>        
+            <ColumnListItem type="Active" press="onRowSelection">
+                <cells>
+                    <Text text="{emp_id}"></Text>
+                </cells>
+            </ColumnListItem>
+        </Table>
+    </Page>
+</mvc:View>
